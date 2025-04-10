@@ -12,7 +12,6 @@
 int counter = 0;
 int branches = 0;
 int extCounter = 0;
-int boardCmp = 0;
 
 class GameState
 {
