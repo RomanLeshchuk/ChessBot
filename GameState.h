@@ -232,8 +232,6 @@ public:
 	{
 		bool operator()(const GameState& first, const GameState& second) const
 		{
-			boardCmp++;
-
 			for (std::uint8_t pos = 0; pos < BoardData::cellsCount; pos++)
 			{
 				// here Bit::specialData stands for both current move side and possibly en passant files
