@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Roman/Desktop/ChessBot
+# Install script for directory: D:/Programming/C++/Console projects/ChessBot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/Roman/Desktop/ChessBot/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/Programming/C++/Console projects/ChessBot/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

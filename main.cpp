@@ -76,7 +76,7 @@ int main()
 
 		game = moveState.first;
 
-		std::cout << "Average branch factor: " << (double)counter / branches << '\n';
+		std::cout << "Average branch factor: " << static_cast<double>(counter) / branches << '\n';
 		std::cout << "Total positions generated: " << counter + extCounter << "\n\n";
 
 		counter = 0;
