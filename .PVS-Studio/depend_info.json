@@ -146,5 +146,20 @@
         ],
         "dependencies": [],
         "id": 6
+    },
+    {
+        "arguments": [
+            "C:\\Program Files\\JetBrains\\CLion 2024.3.3\\bin\\mingw\\bin\\g++.exe",
+            "-ID:/Programming/C++/Console projects/ChessBot/include",
+            "-DNDEBUG",
+            "-std=gnu++20",
+            "-fdiagnostics-color=always",
+            "-DPVS_STUDIO",
+            "-DPVS_VERSION_MAJOR=7",
+            "-DPVS_VERSION_MINOR=36",
+            "D:\\Programming\\C++\\Console projects\\ChessBot\\src\\Game.cpp"
+        ],
+        "dependencies": [],
+        "id": 11
     }
 ]

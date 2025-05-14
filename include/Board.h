@@ -25,16 +25,7 @@ public:
 	[[nodiscard]] bool hasCastleRight(bool isWhite, bool isShort) const;
 
 private:
-    std::array<std::uint8_t, BoardData::cellsCount> m_board{
-        Bit::rook ^ Bit::black, Bit::knight ^ Bit::black, Bit::bishop ^ Bit::black, Bit::queen ^ Bit::black, Bit::king ^ Bit::black, Bit::bishop ^ Bit::black, Bit::knight ^ Bit::black, Bit::rook ^ Bit::black,
-        Bit::pawn ^ Bit::black, Bit::pawn ^ Bit::black, Bit::pawn ^ Bit::black, Bit::pawn ^ Bit::black, Bit::pawn ^ Bit::black, Bit::pawn ^ Bit::black, Bit::pawn ^ Bit::black, Bit::pawn ^ Bit::black,
-        Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty,
-        Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty,
-        Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty,
-        Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty, Bit::empty,
-        Bit::pawn ^ Bit::white, Bit::pawn ^ Bit::white, Bit::pawn ^ Bit::white, Bit::pawn ^ Bit::white, Bit::pawn ^ Bit::white, Bit::pawn ^ Bit::white, Bit::pawn ^ Bit::white, Bit::pawn ^ Bit::white,
-        Bit::rook ^ Bit::white, Bit::knight ^ Bit::white, Bit::bishop ^ Bit::white, Bit::queen ^ Bit::white, Bit::king ^ Bit::white ^ Bit::specialData, Bit::bishop ^ Bit::white, Bit::knight ^ Bit::white, Bit::rook ^ Bit::white,
-    };
+    std::array<std::uint8_t, BoardData::cellsCount> m_board = BoardData::startBoard;
 };
 
 struct HashBoard

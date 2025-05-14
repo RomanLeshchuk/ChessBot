@@ -70,6 +70,13 @@ build CMakeFiles/ChessBot.dir/src/Move.cpp.obj: CXX_COMPILER__ChessBot_unscanned
   OBJECT_DIR = CMakeFiles\ChessBot.dir
   OBJECT_FILE_DIR = CMakeFiles\ChessBot.dir\src
 
+build CMakeFiles/ChessBot.dir/src/Game.cpp.obj: CXX_COMPILER__ChessBot_unscanned_Release D$:/Programming/C++/Console$ projects/ChessBot/src/Game.cpp || cmake_object_order_depends_target_ChessBot
+  DEP_FILE = CMakeFiles\ChessBot.dir\src\Game.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Programming/C++/Console projects/ChessBot/include"
+  OBJECT_DIR = CMakeFiles\ChessBot.dir
+  OBJECT_FILE_DIR = CMakeFiles\ChessBot.dir\src
+
 build CMakeFiles/ChessBot.dir/src/GameState.cpp.obj: CXX_COMPILER__ChessBot_unscanned_Release D$:/Programming/C++/Console$ projects/ChessBot/src/GameState.cpp || cmake_object_order_depends_target_ChessBot
   DEP_FILE = CMakeFiles\ChessBot.dir\src\GameState.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20 -fdiagnostics-color=always
@@ -85,7 +92,7 @@ build CMakeFiles/ChessBot.dir/src/GameState.cpp.obj: CXX_COMPILER__ChessBot_unsc
 #############################################
 # Link the executable ChessBot.exe
 
-build ChessBot.exe: CXX_EXECUTABLE_LINKER__ChessBot_Release CMakeFiles/ChessBot.dir/src/main.cpp.obj CMakeFiles/ChessBot.dir/src/Board.cpp.obj CMakeFiles/ChessBot.dir/src/Move.cpp.obj CMakeFiles/ChessBot.dir/src/GameState.cpp.obj
+build ChessBot.exe: CXX_EXECUTABLE_LINKER__ChessBot_Release CMakeFiles/ChessBot.dir/src/main.cpp.obj CMakeFiles/ChessBot.dir/src/Board.cpp.obj CMakeFiles/ChessBot.dir/src/Move.cpp.obj CMakeFiles/ChessBot.dir/src/Game.cpp.obj CMakeFiles/ChessBot.dir/src/GameState.cpp.obj
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ChessBot.dir

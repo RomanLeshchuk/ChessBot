@@ -8,6 +8,7 @@ add_executable(ChessBot
         src/main.cpp
         src/Board.cpp
         src/Move.cpp
+        src/Game.cpp
         src/GameState.cpp
 )
 
