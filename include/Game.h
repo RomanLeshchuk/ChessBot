@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include <chrono>
 
+// just for debugging
 inline int counter = 0;
 inline int branches = 0;
 inline int extCounter = 0;
