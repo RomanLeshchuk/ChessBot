@@ -1,3 +1,14 @@
 # ninja log v6
-3	980	7660063044783993	CMakeFiles/ChessBot.dir/main.cpp.obj	437a64dab4d7b32e
-990	1148	7660063054661188	ChessBot.exe	b96f11d611902821
+4	1490	7687005212193641	CMakeFiles/ChessBot.dir/main.cpp.obj	437a64dab4d7b32e
+5	441	7687611777806666	CMakeFiles/ChessBot.dir/src/Move.cpp.obj	ca1cc3819e3db043
+1101	1257	7687508922098180	ChessBot.exe	8f555eed223cdaed
+1	172	7688179696753907	build.ninja	903293f20bfe4acc
+6	343	7687610332256448	CMakeFiles/ChessBot.dir/src/Board.cpp.obj	2f0f22128e4a9ab4
+2	1101	7687508911111185	CMakeFiles/ChessBot.dir/src/main.cpp.obj	7720d43a3e2c0013
+7	433	7687611777826659	CMakeFiles/ChessBot.dir/src/GameState.cpp.obj	584283f538de7083
+4	344	7688179696753907	build.ninja	903293f20bfe4acc
+5	1030	7688179696961476	CMakeFiles/ChessBot.dir/src/Board.cpp.obj	2f0f22128e4a9ab4
+10	1075	7688179697011437	CMakeFiles/ChessBot.dir/src/GameState.cpp.obj	584283f538de7083
+8	1077	7688179696991424	CMakeFiles/ChessBot.dir/src/Move.cpp.obj	ca1cc3819e3db043
+3	997	7688182678801551	CMakeFiles/ChessBot.dir/src/main.cpp.obj	7720d43a3e2c0013
+998	1262	7688182688744818	ChessBot.exe	783955b73bd96b48

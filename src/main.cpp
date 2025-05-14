@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include "GameState.h"
+#include "Game.h"
 
 int main()
 {
-	GameState game(true);
+	Game game{};
 
 	std::cout << "Two numbers, 0 for bot, 1 for player, first for white, second for black:\n";
 
@@ -14,7 +14,7 @@ int main()
 
 	for (int i = 0;; i++)
 	{
-		std::pair<GameState, GameState::AfterMoveState> moveState;
+		Game::AfterMoveState flag;
 		if (i & 1 ? blackType : whiteType)
 		{
 			std::string moveDescription;
@@ -24,10 +24,10 @@ int main()
 				std::getline(std::cin, moveDescription);
 				try
 				{
-					GameState::Move move = game.constructMove(moveDescription);
-					if (move != GameState::noMove)
+					Move move = game.constructMoveFromStr(moveDescription);
+					if (move != Move::noMove)
 					{
-						moveState = game.makeMove(move);
+						flag = game.makeMove(move);
 						break;
 					}
 					std::cout << "Incorrect move\n";
@@ -40,41 +40,39 @@ int main()
 		}
 		else
 		{
-			GameState::Move move = game.findBestMove();
-			if (GameState::describeMove(move) == "mate")
+			Move move = game.findBestMove();
+			if (move.describeMoveAsStr() == "mate")
 			{
 				std::cout << (i & 1 ? "Black" : "White") << ": got matted\n";
 				break;
 			}
-			if (GameState::describeMove(move) == "stalemate")
+			if (move.describeMoveAsStr() == "stalemate")
 			{
 				std::cout << (i & 1 ? "Black" : "White") << ": got stalemated\n";
 				break;
 			}
-			moveState = game.makeMove(move);
-			std::cout << (i & 1 ? "Black" : "White") << ": " << GameState::describeMove(move) << '\n';
+			flag = game.makeMove(move);
+			std::cout << (i & 1 ? "Black" : "White") << ": " << move.describeMoveAsStr() << '\n';
 		}
 
-		if (moveState.second == GameState::AfterMoveState::INCORRECT_MOVE)
+		if (flag == Game::AfterMoveState::INCORRECT_MOVE)
 		{
 			std::cout << "Incorrect move\n";
 			i--;
 			continue;
 		}
 
-		if (moveState.second == GameState::AfterMoveState::REPETITION)
+		if (flag == Game::AfterMoveState::REPETITION)
 		{
 			std::cout << "Repetition\n";
 			break;
 		}
 
-		if (moveState.second == GameState::AfterMoveState::FIFTY_MOVES_RULE)
+		if (flag == Game::AfterMoveState::FIFTY_MOVES_RULE)
 		{
 			std::cout << "Fifty moves rule\n";
 			break;
 		}
-
-		game = moveState.first;
 
 		std::cout << "Average branch factor: " << static_cast<double>(counter) / branches << '\n';
 		std::cout << "Total positions generated: " << counter + extCounter << "\n\n";

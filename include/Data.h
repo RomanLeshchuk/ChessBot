@@ -140,9 +140,9 @@ namespace Evaluation
 		std::array<int, BoardData::cellsCount>{
 			 0,   0,   0,   0,   0,   0,  0,   0,
 			 98, 134,  61,  95,  68, 126, 34, -11,
-			 -6,   7,  26,  31,  65,  56, 25, -20,
-			-14,  13,   6,  21,  23,  12, 17, -23,
-			-27,  -2,  -5,  12,  17,   6, 10, -25,
+			 -6,   7,  26,  41,  65,  56, 25, -20,
+			-14,  13,   16,  31,  33,  22, 17, -23,
+			-27,  -2,  5,  22,  27,  11, 10, -25,
 			-26,  -4,  -4, -10,   3,   3, 33, -12,
 			-35,  -1, -20, -23, -15,  24, 38, -22,
 			  0,   0,   0,   0,   0,   0,  0,   0
@@ -265,15 +265,16 @@ namespace Evaluation
 
 namespace EngineData
 {
-	constexpr std::uint8_t searchDepth = 6; // even positive number
+	constexpr std::uint64_t searchTimeMilliseconds = 10; // time to search until depth-2 level reached
+	constexpr std::uint64_t minSearchLevel = 6; // minimum search depth
 	constexpr std::uint8_t nullSearchDepthReduction = 2; // even positive number
 	constexpr std::uint8_t quiescenceSearchDepth = 2; // even positive number
-	constexpr std::uint64_t maxDpEvaluationSize = 10000000;
+	constexpr std::uint64_t maxDpEvaluationSize = 100000000;
 
 	// each cell * each figure * each color + possible en passant files + castle rights combination (2^4) + current move color
-	std::array<std::uint64_t, static_cast<int>(BoardData::cellsCount) * Evaluation::figuresCount * 2 + (1 << Bit::sideSize) + (1 << 4) + 1> zobristHash{};
+	inline std::array<std::uint64_t, static_cast<int>(BoardData::cellsCount) * Evaluation::figuresCount * 2 + (1 << Bit::sideSize) + (1 << 4) + 1> zobristHash{};
 
-	void initHash()
+	inline void initHash()
 	{
 		std::mt19937_64 hashEngine(0);
 		std::uniform_int_distribution<std::uint64_t> randHash(0, std::numeric_limits<std::uint64_t>::max());

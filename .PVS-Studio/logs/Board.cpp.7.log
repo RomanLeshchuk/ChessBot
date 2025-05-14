@@ -1,0 +1,1 @@
+{"code":"V009","falseAlarm":false,"level":0,"message":"To use free version of PVS-Studio, source code files are required to start with a special comment.","positions":[{"file":"D:\\Programming\\C++\\Console projects\\ChessBot\\src\\Board.cpp","lines":[1]}]}
